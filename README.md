@@ -31,6 +31,21 @@ enum TypePassenger {
                     limitQuantity = LIMIT_PASSENGER_ADULT
                     minimQuantity = MINUS_PASSENGER_ADULT
 ```
+- Comment methods
+```
+    /// Find  the code content in an arrray with the string received
+    /// - Parameters:
+    ///   - content: array with content
+    ///   - valueToFind: value to find
+    func findByCode(content: Stations, valueToFind: String) -> [Station]? {
+        
+        let arrResult = content.airports.filter {
+            $0.code.uppercased().contains(valueToFind.uppercased())
+        }
+        
+        return arrResult
+    }
+
 
 
 
