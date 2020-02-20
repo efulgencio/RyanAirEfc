@@ -48,6 +48,8 @@ enum TypePassenger {
 ```
 - Always I use Alamofire, but at this project I want to change and use URLSession
 ```
+    typealias ApiServiceCompletionBlock = (_ data: Data?,_ error: AppErrors?)->Void
+    
     /// Call the URL for get the list of aeroports
     /// - Parameter completion: return the data with the information and AppErrors if process
       func requestAPI(completion: @escaping ApiServiceCompletionBlock) {
@@ -76,6 +78,7 @@ enum TypePassenger {
                task.resume()
             }
       }
+´´´
 
 
 
