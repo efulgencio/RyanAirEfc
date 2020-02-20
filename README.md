@@ -79,6 +79,8 @@ enum TypePassenger {
             }
       }
 
+```
+
 - Use of Codable for convert data to entity
 
 ```
@@ -90,8 +92,8 @@ struct Stations: Codable {
       case stations
     }
 ```
-
-    let stationObject: Stations = try JSONDecoder().decode(Stations.self, from: data)
+  
+> let stationObject: Stations = try JSONDecoder().decode(Stations.self, from: data)
 
 
 
