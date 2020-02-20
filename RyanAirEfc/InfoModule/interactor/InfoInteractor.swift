@@ -28,9 +28,12 @@ class InfoInteractor: InfoInteractorInputProtocol{
           }
         }
     }
-
-    func getRoute() {
-        ApiServiceManager.sharedService.requestAPI() { (response, error) in
+        
+    func fetchGetApiAvailability(params: ParamsAvailibility) {
+        // feed params
+        ApiServiceManager.sharedService.params = params
+        
+        ApiServiceManager.sharedService.requestAPIAvailability() { (response, error) in
           DispatchQueue.main.async {
             guard let data = response else {
                 self.presenter?.routeDetailFetched(route: nil, errorMessage: error?.infoAppError)

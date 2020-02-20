@@ -14,6 +14,7 @@ protocol InfoViewProtocol {
   var infoInteractor: InfoInteractor? {get set}
   //View -> Presenter
   func viewDidLoad()
+  func getAvailability(params: ParamsAvailibility)
 }
 
 protocol InfoPresenterProtocol {
@@ -26,7 +27,7 @@ protocol InfoInteractorInputProtocol {
   var presenter: InfoPresenter? {get set}
   //Presenter -> Interactor
   func fetchGetApi()
-  func getRoute()
+  func fetchGetApiAvailability(params: ParamsAvailibility)
     
 }
 

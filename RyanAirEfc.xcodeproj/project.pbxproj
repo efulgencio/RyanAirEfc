@@ -20,7 +20,7 @@
 		41600B3223FC6B3700D02130 /* InfoWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B3123FC6B3700D02130 /* InfoWireframe.swift */; };
 		41600B3423FC6B8500D02130 /* InfoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B3323FC6B8500D02130 /* InfoProtocols.swift */; };
 		41600B3623FC6DFA00D02130 /* ApiServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B3523FC6DFA00D02130 /* ApiServiceManager.swift */; };
-		41600B3823FC6FBF00D02130 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B3723FC6FBF00D02130 /* ApiClient.swift */; };
+		41600B3823FC6FBF00D02130 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B3723FC6FBF00D02130 /* APIClient.swift */; };
 		41600B3B23FC931400D02130 /* PassengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B3A23FC931400D02130 /* PassengerView.swift */; };
 		41600B3D23FC932D00D02130 /* PassengerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41600B3C23FC932D00D02130 /* PassengerView.xib */; };
 		41600B4023FD1B8600D02130 /* CALayerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B3F23FD1B8600D02130 /* CALayerExt.swift */; };
@@ -29,6 +29,7 @@
 		41600B4723FD39DC00D02130 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B4623FD39DC00D02130 /* PopUpVC.swift */; };
 		417D407923FDB5D300B74E27 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D407823FDB5D300B74E27 /* AppErrors.swift */; };
 		4188840E23FE90C0005409A1 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188840D23FE90C0005409A1 /* SearchManager.swift */; };
+		4188841023FEAA64005409A1 /* ParamsAvailibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +48,7 @@
 		41600B3123FC6B3700D02130 /* InfoWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoWireframe.swift; sourceTree = "<group>"; };
 		41600B3323FC6B8500D02130 /* InfoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoProtocols.swift; sourceTree = "<group>"; };
 		41600B3523FC6DFA00D02130 /* ApiServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceManager.swift; sourceTree = "<group>"; };
-		41600B3723FC6FBF00D02130 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		41600B3723FC6FBF00D02130 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		41600B3A23FC931400D02130 /* PassengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerView.swift; sourceTree = "<group>"; };
 		41600B3C23FC932D00D02130 /* PassengerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassengerView.xib; sourceTree = "<group>"; };
 		41600B3F23FD1B8600D02130 /* CALayerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExt.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		41600B4623FD39DC00D02130 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		417D407823FDB5D300B74E27 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
 		4188840D23FE90C0005409A1 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
+		4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsAvailibility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				41600B3523FC6DFA00D02130 /* ApiServiceManager.swift */,
-				41600B3723FC6FBF00D02130 /* ApiClient.swift */,
+				41600B3723FC6FBF00D02130 /* APIClient.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -215,6 +217,7 @@
 				41600B4423FD2ED100D02130 /* Constants.swift */,
 				417D407823FDB5D300B74E27 /* AppErrors.swift */,
 				4188840D23FE90C0005409A1 /* SearchManager.swift */,
+				4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -307,7 +310,8 @@
 				41600B4023FD1B8600D02130 /* CALayerExt.swift in Sources */,
 				41600B3023FC6B2800D02130 /* Stations.swift in Sources */,
 				4188840E23FE90C0005409A1 /* SearchManager.swift in Sources */,
-				41600B3823FC6FBF00D02130 /* ApiClient.swift in Sources */,
+				41600B3823FC6FBF00D02130 /* APIClient.swift in Sources */,
+				4188841023FEAA64005409A1 /* ParamsAvailibility.swift in Sources */,
 				417D407923FDB5D300B74E27 /* AppErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

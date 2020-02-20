@@ -36,6 +36,7 @@ class InfoController: UIViewController {
         
     }
     
+    // MARK: - prepare view
     func prepareView() {
         passengerAdult.typePassenger = .adult
         passengerTeen.typePassenger = .teen
@@ -43,15 +44,16 @@ class InfoController: UIViewController {
     }
     
     func prepareGesture() {
-         let tapGestureRecognizerViewOrigin = UITapGestureRecognizer(target: self, action: #selector(originTapped(tapGestureRecognizer:)))
-         let tapGestureRecognizerViewDestination = UITapGestureRecognizer(target: self, action: #selector(originTapped(tapGestureRecognizer:)))
+         let tapGestureRecognizerViewOrigin = UITapGestureRecognizer(target: self, action: #selector(tapped(tapGestureRecognizer:)))
+         let tapGestureRecognizerViewDestination = UITapGestureRecognizer(target: self, action: #selector(tapped(tapGestureRecognizer:)))
          origin.isUserInteractionEnabled = true
          origin.addGestureRecognizer(tapGestureRecognizerViewOrigin)
          destination.isUserInteractionEnabled = true
          destination.addGestureRecognizer(tapGestureRecognizerViewDestination)
      }
     
-    @objc func originTapped(tapGestureRecognizer: UITapGestureRecognizer){
+    // MARK: - tap gesture method
+    @objc func tapped(tapGestureRecognizer: UITapGestureRecognizer){
         
          destinationSelecction = tapGestureRecognizer.view as? UITextField
         
@@ -63,11 +65,28 @@ class InfoController: UIViewController {
          self.present(popupVC, animated: true, completion: nil)
     }
     
+    // MARK: - call back function from popupVC
     func someFunctionThatWillHandleYourReturnValue(value: String) {
         if value != CANCEL_SELECTION_AIRPORT {
             (destinationSelecction as UITextField).text = value
         }
     }
+    
+    // MARK: - find method with values
+    @IBAction func btnTouchFind(_ sender: Any) {
+        let params = ParamsAvailibility.init()
+        // fill params
+        params.origin = String((origin.text?.split(separator: "/")[1])!)
+        params.destination = String((origin.text?.split(separator: "/")[1])!)
+        params.dateout = "2020-08-14"
+        params.adt = passengerAdult.lblQuantity.text!
+        params.teen = passengerTeen.lblQuantity.text!
+        params.chd = passengerChild.lblQuantity.text!
+        
+        presenter.getAvailability(params: params)
+    }
+    
+    
 }
 
 //MARK: InfoPresenterProtocol
@@ -76,22 +95,3 @@ extension InfoController: InfoPresenterProtocol {
         stations = recentSavedInfo
     }
 }
-
-
-
-
-//extension ClinicaController {
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//       if segue.identifier == "seguePopUp"  {
-//        numeroSeccionesOcultas = HiddenShowManager.shared.getNumberHidden()
-//        if var secondViewController = segue.destination as? RefreshSectionHiddenShow {
-//                secondViewController.returnValueBool = someFunctionThatWillHandleYourReturnValue
-//        }
-//       }
-//    }
-//
-//    func someFunctionThatWillHandleYourReturnValue(returnedValue: Bool) {
-//         viewWillAppear(false)
-//    }
-//
-//}

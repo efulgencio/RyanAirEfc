@@ -18,9 +18,9 @@ class InfoPresenter: InfoViewProtocol {
        InfoWireframe.loadInfoPageComponents(withPresenter: self)
        infoInteractor?.fetchGetApi()
     }
-    
-    func getRouteButtonPressedFor() {
-      infoInteractor?.getRoute()
+
+    func getAvailability(params: ParamsAvailibility) {
+        infoInteractor?.fetchGetApiAvailability(params: params)
     }
 
 }

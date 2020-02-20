@@ -41,13 +41,13 @@ class PassengerView: UIView {
             switch typePassenger {
                 case .adult:
                     limitQuantity = LIMIT_PASSENGER_ADULT
-                    minimQuantity = 1
+                    minimQuantity = MINUS_PASSENGER_ADULT
                 case .teen:
                     limitQuantity = LIMIT_PASSENGER_TEEN
-                    minimQuantity = 0
+                    minimQuantity = MINUS_PASSENGER_TEEN
                 case .child:
                     limitQuantity = LIMIT_PASSENGER_CHILD
-                    minimQuantity = 0
+                    minimQuantity = MINUS_PASSENGER_CHILD
             }
             lblQuantity.text = String(minimQuantity)
             lblDescription.text = typePassenger.descTypePassenger
@@ -77,10 +77,9 @@ class PassengerView: UIView {
           view.frame = bounds
           view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
           view.translatesAutoresizingMaskIntoConstraints = true
-         // lblDescription.text = typePassenger.descTypePassenger
          
           addSubview(view)
-  
+
       }
       
       class func instanceFromNib() -> UIView {
