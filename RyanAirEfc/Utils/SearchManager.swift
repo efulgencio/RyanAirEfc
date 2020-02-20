@@ -17,7 +17,7 @@ class SearchManager: NSObject {
     func findByCode(content: Stations, valueToFind: String) -> [Station]? {
         
         let arrResult = content.airports.filter {
-            $0.code.contains(valueToFind)
+            $0.code.uppercased().contains(valueToFind.uppercased())
         }
         
         return arrResult
@@ -26,10 +26,11 @@ class SearchManager: NSObject {
     func findByName(content: Stations, valueToFind: String) -> [Station]? {
         
         let arrResult = content.airports.filter {
-            $0.name.contains(valueToFind)
+            $0.name.uppercased().contains(valueToFind.uppercased())
         }
         
         return arrResult
     }
+    
 
 }

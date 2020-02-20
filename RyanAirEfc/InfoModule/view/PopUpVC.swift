@@ -22,10 +22,11 @@ class PopUpVC: UIViewController, RefreshSectionHiddenShow {
     
     var returnValueSel: ((String) -> ())?
     var stations: Stations?
+    var orignalVersion: Stations?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        orignalVersion = stations
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
@@ -35,24 +36,34 @@ class PopUpVC: UIViewController, RefreshSectionHiddenShow {
     // Find by name
     @IBAction func btnTouchFind(_ sender: Any) {
         
-        if byName.text!.isEmpty { return }
-        
-        byCode.text = ""
-        if let resultado = SearchManager.shared.findByName(content: stations!, valueToFind: byName.text!) {
-            stations!.airports = resultado
+        if byName.text!.isEmpty {
+            byCode.text = ""
+            stations! = orignalVersion!
             endEditAndReloadTableView()
+        } else {
+            byCode.text = ""
+            if let resultado = SearchManager.shared.findByName(content: orignalVersion!, valueToFind: byName.text!) {
+                stations!.airports = resultado
+                endEditAndReloadTableView()
+            }
         }
+    
     }
     // Find by Code
     @IBAction func btnTouchFindByCode(_ sender: Any) {
         
-        if byCode.text!.isEmpty { return }
-        
-        byName.text = ""
-        if let resultado = SearchManager.shared.findByCode(content: stations!, valueToFind: byCode.text!) {
-            stations!.airports = resultado
+        if byCode.text!.isEmpty {
+             byName.text = ""
+            stations! = orignalVersion!
             endEditAndReloadTableView()
+        } else {
+            byName.text = ""
+            if let resultado = SearchManager.shared.findByCode(content: orignalVersion!, valueToFind: byCode.text!) {
+                stations!.airports = resultado
+                endEditAndReloadTableView()
+            }
         }
+        
     }
     
     @IBAction func btnTouchClose(_ sender: Any) {
