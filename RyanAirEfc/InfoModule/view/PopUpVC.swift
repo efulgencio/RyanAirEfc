@@ -11,8 +11,9 @@ import UIKit
 
 
 
-class PopUpVC: UIViewController {
+class PopUpVC: UIViewController, RefreshSectionHiddenShow {
 
+    var returnSelected: ((String) -> ())?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,24 +25,19 @@ class PopUpVC: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-
         tableView.reloadData()
-        // Do any additional setup after loading the view.
     }
     
+     // MARK: - Buttons Action
     @IBAction func btnTouchFind(_ sender: Any) {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnTouchClose(_ sender: Any) {
+        returnSelected!(CANCEL_SELECTION_AIRPORT)
+        self.dismiss(animated: false, completion: nil)
     }
-    */
+
 
 }
 
@@ -49,24 +45,25 @@ extension PopUpVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let numero = stations!.airports.count
-        print(numero)
-        return stations!.airports.count
+        guard let countStation = stations?.airports.count else {
+            return 0
+        }
+        
+        return countStation
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel!.text = stations?.airports[indexPath.row].name
+        cell.detailTextLabel!.text = stations?.airports[indexPath.row].code
         return cell
     }
     
 }
 
 extension PopUpVC: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      //
+        returnSelected!((stations?.airports[indexPath.row].name)!)
+        self.dismiss(animated: false, completion: nil)
     }
-    
 }
-

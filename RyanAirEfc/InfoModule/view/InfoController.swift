@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RefreshSectionHiddenShow {
-    var returnValueBool: ((Bool) -> ())?  { get set }
+    var returnSelected: ((String) -> ())?  { get set }
 }
 
 class InfoController: UIViewController {
@@ -20,7 +20,9 @@ class InfoController: UIViewController {
     @IBOutlet weak var origin: UITextField!
     @IBOutlet weak var destination: UITextField!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
     
+    var destinationSelecction: UITextField!
     var stations: Stations?
     var presenter: InfoPresenter = InfoPresenter()
     
@@ -41,19 +43,31 @@ class InfoController: UIViewController {
     }
     
     func prepareGesture() {
-         let tapGestureRecognizerView = UITapGestureRecognizer(target: self, action: #selector(originTapped(tapGestureRecognizer:)))
+         let tapGestureRecognizerViewOrigin = UITapGestureRecognizer(target: self, action: #selector(originTapped(tapGestureRecognizer:)))
+         let tapGestureRecognizerViewDestination = UITapGestureRecognizer(target: self, action: #selector(originTapped(tapGestureRecognizer:)))
          origin.isUserInteractionEnabled = true
-         origin.addGestureRecognizer(tapGestureRecognizerView)
+         origin.addGestureRecognizer(tapGestureRecognizerViewOrigin)
+         destination.isUserInteractionEnabled = true
+         destination.addGestureRecognizer(tapGestureRecognizerViewDestination)
      }
     
     @objc func originTapped(tapGestureRecognizer: UITapGestureRecognizer){
+        
+         destinationSelecction = tapGestureRecognizer.view as? UITextField
+        
          let storyBoard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
          let popupVC = storyBoard.instantiateViewController(withIdentifier: "popUpVCid") as! PopUpVC
          popupVC.stations = stations
+         popupVC.returnSelected = someFunctionThatWillHandleYourReturnValue
+        
          self.present(popupVC, animated: true, completion: nil)
     }
     
-    
+    func someFunctionThatWillHandleYourReturnValue(value: String) {
+        if value != CANCEL_SELECTION_AIRPORT {
+            (destinationSelecction as UITextField).text = value
+        }
+    }
 }
 
 //MARK: InfoPresenterProtocol
