@@ -46,7 +46,7 @@ enum TypePassenger {
         return arrResult
     }
 ```
-- Always I use Alamofire, but at this project I want to change and use URLSession
+- Always I use Alamofire, **but at this project I want to change and use URLSession
 ```
     typealias ApiServiceCompletionBlock = (_ data: Data?,_ error: AppErrors?)->Void
     
@@ -78,7 +78,19 @@ enum TypePassenger {
                task.resume()
             }
       }
-´´´
+
+- Use of Codable for convert data to entity
+
+```
+struct Stations: Codable {
+    
+    var airports: [Station]
+    
+    enum CodingKeys: String, CodingKey {
+      case stations
+    }
+    
+    let stationObject: Stations = try JSONDecoder().decode(Stations.self, from: data)
 
 
 
