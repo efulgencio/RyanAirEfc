@@ -13,6 +13,7 @@ enum AppErrors {
     case error_code2
     case error_code3
     case error_code4
+    case error_parsingJSONDecoded
     
     var infoAppError: String {
         switch self {
@@ -20,6 +21,7 @@ enum AppErrors {
             case .error_code2: return "error code 2"
             case .error_code3: return "error code 3"
             case .error_code4: return "error code 4"
+            case .error_parsingJSONDecoded: return "Error request Availibility when parsing JSONDecoded.!!"
         }
     }
 }

@@ -21,7 +21,7 @@ class InfoInteractor: InfoInteractorInputProtocol{
             }
                 do {
                     let stationObject: Stations = try JSONDecoder().decode(Stations.self, from: data)
-                    self.presenter?.didFinishFetchingInfoResults(allSearches: stationObject, error: nil)
+                    self.presenter?.didFinishFetchingStationResults(allSearches: stationObject, error: nil)
                 } catch let error as NSError {
                     print(error.localizedDescription)
                 }
@@ -39,11 +39,10 @@ class InfoInteractor: InfoInteractorInputProtocol{
               return
             }
                 do {
-                    let json = String(data: data, encoding: String.Encoding.utf8)
                     let tripObject: Trips = try JSONDecoder().decode(Trips.self, from: data)
-                 //   self.presenter?.didFinishFetchingInfoResults(allSearches: stationObject, error: nil)
-                } catch let error as NSError {
-                    print(error.localizedDescription)
+                    self.presenter?.didFinishFetchingTripResults(allSearches: tripObject, error: nil)
+                } catch  _ as NSError {
+                    self.presenter?.didFinishFetchingTripResults(allSearches: nil, error: AppErrors.error_parsingJSONDecoded)
                 }
           }
         }

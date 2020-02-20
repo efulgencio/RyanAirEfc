@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+/// Convert Data to String with format yyyy-MM-dd
+/// - Parameter date: Date to convert to String
 func stringFromDate(_ date: Date) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"

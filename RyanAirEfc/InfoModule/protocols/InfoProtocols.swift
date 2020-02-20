@@ -19,7 +19,8 @@ protocol InfoViewProtocol {
 
 protocol InfoPresenterProtocol {
   //Presenter -> View
-    func updateTheRecentInfoList(recentSavedInfo: Stations, error: AppErrors?)
+    func updateTheRecentStationList(recentSavedInfo: Stations, error: AppErrors?)
+    func updateTheRecentTripList(recentSavedInfo: Trips, error: AppErrors?)
 }
 
 protocol InfoInteractorInputProtocol {
@@ -33,8 +34,8 @@ protocol InfoInteractorInputProtocol {
 
 protocol InfoInteractorOutputProtocol {
   //Interactor -> Protocol
-  func didFinishFetchingInfoResults(allSearches: Stations?,error: AppErrors?)
-    func routeDetailFetched(route: [String]?,errorMessage: String?)
+  func didFinishFetchingStationResults(allSearches: Stations?,error: AppErrors?)
+  func didFinishFetchingTripResults(allSearches: Trips? ,error: AppErrors?) 
 }
 
 protocol InfoWireframeProtocol {

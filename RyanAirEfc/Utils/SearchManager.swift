@@ -12,8 +12,11 @@ import Foundation
 class SearchManager: NSObject {
   
   static let shared = SearchManager()
-  
     
+    /// Find  the code content in an arrray with the string received
+    /// - Parameters:
+    ///   - content: array to find
+    ///   - valueToFind: value to find
     func findByCode(content: Stations, valueToFind: String) -> [Station]? {
         
         let arrResult = content.airports.filter {
@@ -23,6 +26,10 @@ class SearchManager: NSObject {
         return arrResult
     }
     
+    /// Find the name content in an array with the string received
+    /// - Parameters:
+    ///   - content: array to find
+    ///   - valueToFind: value to find
     func findByName(content: Stations, valueToFind: String) -> [Station]? {
         
         let arrResult = content.airports.filter {

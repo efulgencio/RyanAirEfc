@@ -26,14 +26,15 @@ class InfoPresenter: InfoViewProtocol {
 }
 
 extension InfoPresenter: InfoInteractorOutputProtocol {
-    func routeDetailFetched(route: [String]?, errorMessage: String?) {
-        guard let sourceController = viewRef else {
-          return
-        }
-        infoWireframe?.showDetail(from: sourceController, withRoute: route!)
+    func didFinishFetchingStationResults(allSearches: Stations?, error: AppErrors?) {
+        viewRef?.updateTheRecentStationList(recentSavedInfo: allSearches!, error: error)
     }
     
-    func didFinishFetchingInfoResults(allSearches: Stations?, error: AppErrors?) {
-        viewRef?.updateTheRecentInfoList(recentSavedInfo: allSearches!, error: error)
+    func didFinishFetchingTripResults(allSearches: Trips?, error: AppErrors?) {
+        if let content = allSearches {
+          viewRef?.updateTheRecentTripList(recentSavedInfo: content, error: error)
+        } else {
+            viewRef?.showError(error: error!)
+        }
     }
 }

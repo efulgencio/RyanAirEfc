@@ -11,6 +11,9 @@ import UIKit
 
 extension CALayer {
     
+    
+    /// Show the content layer from top
+    /// - Parameter duration: duration of the animation
     func bottomAnimation(duration:CFTimeInterval) {
         let animation = CATransition()
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
@@ -20,6 +23,9 @@ extension CALayer {
         self.add(animation, forKey: CATransitionType.push.rawValue)
     }
     
+    
+    /// Show the content layer from bottom
+    /// - Parameter duration: duration of the animation
     func topAnimation(duration:CFTimeInterval) {
         let animation = CATransition()
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
@@ -29,13 +35,3 @@ extension CALayer {
         self.add(animation, forKey: CATransitionType.push.rawValue)
     }
 }
-
-//// (6) label animation
-//func labelAnimation() {
-//        let label = UILabel()
-//        view.addSubview(label)
-//        label.layer.bottomAnimation(duration: 0.7)
-//        counter = counter + 1
-//        label.text = "\(counter)"
-//        situarComponente(label: label)
-//}

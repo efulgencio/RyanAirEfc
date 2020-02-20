@@ -9,8 +9,6 @@
 import UIKit
 
 
-
-
 class PopUpVC: UIViewController, RefreshSectionHiddenShow {
 
     var returnSelected: ((String) -> ())?
@@ -49,6 +47,7 @@ class PopUpVC: UIViewController, RefreshSectionHiddenShow {
         }
     
     }
+    
     // Find by Code
     @IBAction func btnTouchFindByCode(_ sender: Any) {
         
@@ -66,12 +65,16 @@ class PopUpVC: UIViewController, RefreshSectionHiddenShow {
         
     }
     
+    /// Action user cancel selected airport
+    ///  fill the clousure with the constants that indicate CANCEL SELECTION
+    /// - Parameter sender: button cancel
     @IBAction func btnTouchClose(_ sender: Any) {
         returnSelected!(CANCEL_SELECTION_AIRPORT)
         self.dismiss(animated: false, completion: nil)
     }
     
     // MARK: - private function
+    /// Hidden the keyboard and refresh the tableView
     private func endEditAndReloadTableView() {
         view.endEditing(true)
         tableView.reloadData()
@@ -80,6 +83,7 @@ class PopUpVC: UIViewController, RefreshSectionHiddenShow {
 
 }
 
+// MARK: - Data source table view
 extension PopUpVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,6 +104,7 @@ extension PopUpVC: UITableViewDataSource {
     
 }
 
+// MARK: - Delegate table view
 extension PopUpVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         returnSelected!("\(stations!.airports[indexPath.row].name)/\(stations!.airports[indexPath.row].code)")

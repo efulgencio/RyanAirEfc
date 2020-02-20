@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class ApiServiceManager: NSObject {
   
   var params: ParamsAvailibility?
@@ -16,6 +17,9 @@ class ApiServiceManager: NSObject {
   
   typealias ApiServiceCompletionBlock = (_ data: Data?,_ error: AppErrors?)->Void
     
+    
+    /// Call the URL for get the list of aeroports
+    /// - Parameter completion: return the data with the information and AppErrors if process
       func requestAPI(completion: @escaping ApiServiceCompletionBlock) {
         
             if var urlComponents = URLComponents(string: APIClient.shared.urlStations) {
@@ -30,7 +34,7 @@ class ApiServiceManager: NSObject {
                let session = URLSession(configuration: config)
                 
                let task = session.dataTask(with: request) { (data, response, error) in
-                if let error = error { completion(nil,AppErrors.error_code1) }
+                if error != nil { completion(nil,AppErrors.error_code1) }
                     
                     if let data = data as Data? {
                          // let responseString = String(data: data, encoding: String.Encoding.utf8)
@@ -43,6 +47,9 @@ class ApiServiceManager: NSObject {
             }
       }
     
+    
+    /// Call the URL for get the destination with llist timetable
+    /// - Parameter completion: return the data with the information and AppErrors if process
     func requestAPIAvailability(completion: @escaping ApiServiceCompletionBlock) {
         
         if var urlComponents = URLComponents(string: APIClient.shared.getAvailability(params: ApiServiceManager.sharedService.params!) ) {
@@ -59,7 +66,7 @@ class ApiServiceManager: NSObject {
            let session = URLSession(configuration: config)
             
            let task = session.dataTask(with: request) { (data, response, error) in
-            if let error = error { completion(nil,AppErrors.error_code1) }
+            if error != nil { completion(nil,AppErrors.error_code1) }
                 
                 if let data = data as Data? {
                      // let responseString = String(data: data, encoding: String.Encoding.utf8)

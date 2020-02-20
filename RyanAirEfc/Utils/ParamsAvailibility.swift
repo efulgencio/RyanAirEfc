@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+/// Class for generate URL for Availability flys
 class ParamsAvailibility {
 
     var origin = ""
@@ -18,10 +20,14 @@ class ParamsAvailibility {
     var teen = ""
     var chd = ""
     
+    
+    /// Return the base URL with  the  parameters
     func generateUrl() -> String {
         return APIClient.shared.urlAvailability + generateParameters()
     }
     
+    
+    /// Generate string with key / values with parameters properties
     private func generateParameters() -> String {
         // origin destination
         let param1 = "origin=\(origin)&destination=\(destination)&"
@@ -36,6 +42,8 @@ class ParamsAvailibility {
         
     }
     
+    
+    /// At the document PDF that request this test have this URL I use for test le request / reponse
     func testDocumentPdf() -> String {
         let param100 =
         "origin=DUB&destination=STN&dateout=2020-08-09&datein=&flexdaysbeforeout=3&flexdaysout=3&flexdaysbeforein=3&flexdaysin=3"
@@ -45,36 +53,3 @@ class ParamsAvailibility {
         return param100 + param200
     }
 }
-
-// Example
-//     origin=DUB
-//     &
-//     destination=STN
-//     &
-
-//     dateout=2020-08-09
-//     &
-//     datein=
-//     &
-
-//     flexdaysbeforeout=3
-//     &
-//     flexdaysout=3
-//     &
-//     flexdaysbeforein=3
-//     &
-//     flexdaysin=3
-//     &
-
-//     adt=1
-//     &
-//     teen=0
-//     &
-//     chd=0
-//     &
-
-//     roundtrip=false
-//     &
-//     ToUs=AGREED
-//     &
-//     Disc=0
