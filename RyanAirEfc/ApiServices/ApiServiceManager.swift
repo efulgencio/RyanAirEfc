@@ -37,10 +37,9 @@ class ApiServiceManager: NSObject {
                 if error != nil { completion(nil,AppErrors.error_code1) }
                     
                     if let data = data as Data? {
-                         // let responseString = String(data: data, encoding: String.Encoding.utf8)
                         completion(data, nil)
                     } else {
-                        completion(nil, nil)
+                        completion(nil, .error_code1)
                     }
                 }
                task.resume()
