@@ -44,6 +44,9 @@ class InfoController: UIViewController {
         passengerAdult.typePassenger = .adult
         passengerTeen.typePassenger = .teen
         passengerChild.typePassenger = .child
+        // Date Picker no days before today
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+        datePicker.minimumDate = Date()
     }
     
     /// When tap a TextField origin or destination we need  show the list of airports
