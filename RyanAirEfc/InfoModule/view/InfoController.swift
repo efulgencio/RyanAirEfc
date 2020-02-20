@@ -72,7 +72,7 @@ class InfoController: UIViewController {
 
 //MARK: InfoPresenterProtocol
 extension InfoController: InfoPresenterProtocol {
-    func updateTheRecentInfoList(recentSavedInfo: Stations, error: Error?) {
+    func updateTheRecentInfoList(recentSavedInfo: Stations, error: AppErrors?) {
         stations = recentSavedInfo
     }
 }

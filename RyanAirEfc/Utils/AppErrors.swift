@@ -14,7 +14,7 @@ enum AppErrors {
     case error_code3
     case error_code4
     
-    var infoError: String {
+    var infoAppError: String {
         switch self {
             case .error_code1: return "error code 1"
             case .error_code2: return "error code 2"

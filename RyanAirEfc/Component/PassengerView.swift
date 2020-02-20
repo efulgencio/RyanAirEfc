@@ -96,14 +96,22 @@ class PassengerView: UIView {
     
      
     @IBAction func btnTouch(_ sender: UIButton) {
-        if sender.tag == BTN_ADD {
-            lblQuantity.text =  AddorSumNumberWithLimit.addNumber(actual: valueInt, increment: 1, limitMaxim: 6)
+        if sender.tag == BTN_ADD && permissionForAdd() {
+            lblQuantity.text =  AddorSumNumberWithLimit.addNumber(actual: valueInt, increment: 1, limitMaxim: limitQuantity)
             lblQuantity.layer.bottomAnimation(duration: 0.5)
-        } else {
+        } else if sender.tag == BTN_MINUS && permissionForMinus() {
             lblQuantity.text = AddorSumNumberWithLimit.minusNumber(actual: valueInt, decrement: 1, limitMinim: minimQuantity)
             lblQuantity.layer.topAnimation(duration: 0.5)
         }
     }
     
-
+    // MARK: - private function
+    private func permissionForAdd() -> Bool {
+        return !((valueInt + 1) > limitQuantity)
+    }
+    
+    private func permissionForMinus() -> Bool {
+        return !((valueInt - 1) < minimQuantity)
+    }
+    
 }

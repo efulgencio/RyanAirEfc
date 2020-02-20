@@ -33,7 +33,7 @@ extension InfoPresenter: InfoInteractorOutputProtocol {
         infoWireframe?.showDetail(from: sourceController, withRoute: route!)
     }
     
-    func didFinishFetchingInfoResults(allSearches: Stations?, error: Error?) {
-        viewRef?.updateTheRecentInfoList(recentSavedInfo: allSearches!, error: nil) 
+    func didFinishFetchingInfoResults(allSearches: Stations?, error: AppErrors?) {
+        viewRef?.updateTheRecentInfoList(recentSavedInfo: allSearches!, error: error)
     }
 }

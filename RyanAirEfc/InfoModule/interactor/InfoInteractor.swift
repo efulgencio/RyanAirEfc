@@ -33,7 +33,7 @@ class InfoInteractor: InfoInteractorInputProtocol{
         ApiServiceManager.sharedService.requestAPI() { (response, error) in
           DispatchQueue.main.async {
             guard let data = response else {
-              self.presenter?.routeDetailFetched(route: nil, errorMessage: error?.localizedDescription)
+                self.presenter?.routeDetailFetched(route: nil, errorMessage: error?.infoAppError)
               return
             }
             

@@ -63,7 +63,7 @@ extension PopUpVC: UITableViewDataSource {
 
 extension PopUpVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        returnSelected!((stations?.airports[indexPath.row].name)!)
+        returnSelected!("\(stations!.airports[indexPath.row].name)/\(stations!.airports[indexPath.row].code)")
         self.dismiss(animated: false, completion: nil)
     }
 }

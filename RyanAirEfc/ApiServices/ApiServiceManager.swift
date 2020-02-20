@@ -12,7 +12,7 @@ class ApiServiceManager: NSObject {
   
   static let sharedService = ApiServiceManager()
   
-  typealias ApiServiceCompletionBlock = (_ data: Data?,_ error: Error?)->Void
+  typealias ApiServiceCompletionBlock = (_ data: Data?,_ error: AppErrors?)->Void
     
   func requestAPI(completion: @escaping ApiServiceCompletionBlock) {
     
@@ -28,7 +28,7 @@ class ApiServiceManager: NSObject {
            let session = URLSession(configuration: config)
             
            let task = session.dataTask(with: request) { (data, response, error) in
-                if let error = error { completion(nil,error) }
+            if let error = error { completion(nil,AppErrors.error_code1) }
                 
                 if let data = data as Data? {
                      // let responseString = String(data: data, encoding: String.Encoding.utf8)
