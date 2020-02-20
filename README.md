@@ -95,5 +95,8 @@ struct Stations: Codable {
   
 > let stationObject: Stations = try JSONDecoder().decode(Stations.self, from: data)
 
+- Use of closure for pass values between ViewControllers.
+```
+ var returnSelected: ((String) -> ())?
 
 
