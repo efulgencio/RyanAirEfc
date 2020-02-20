@@ -89,7 +89,8 @@ struct Stations: Codable {
     enum CodingKeys: String, CodingKey {
       case stations
     }
-    
+```
+
     let stationObject: Stations = try JSONDecoder().decode(Stations.self, from: data)
 
 
