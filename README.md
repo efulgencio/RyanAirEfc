@@ -46,7 +46,7 @@ enum TypePassenger {
         return arrResult
     }
 ```
-- Always I use Alamofire, **but at this project I want to change and use URLSession
+- Always I use Alamofire, **but at this project I want to change and use URLSession**
 ```
     typealias ApiServiceCompletionBlock = (_ data: Data?,_ error: AppErrors?)->Void
     
@@ -84,7 +84,7 @@ enum TypePassenger {
 - Use of Codable for convert data to entity
 
 ```
-struct Stations: Codable {
+struct **Stations**: Codable {
     
     var airports: [Station]
     
@@ -93,7 +93,7 @@ struct Stations: Codable {
     }
 ```
   
-> let stationObject: Stations = try JSONDecoder().decode(Stations.self, from: data)
+> let stationObject: Stations = try JSONDecoder().decode(**Stations.self**, from: data)
 
 - Use of closure for pass values between ViewControllers.
 ```
