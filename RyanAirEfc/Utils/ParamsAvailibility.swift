@@ -32,7 +32,14 @@ class ParamsAvailibility {
         // adt, teen, children
         let param4 = "adt=\(adt)&teen=\(teen)&chd=\(chd)&"
         
-        return param1 + param2 + param3 + param4 + "roundtrip=false&ToUs=AGREED&Disc=0"
+     //   return param1 + param2 + param3 + param4 + "roundtrip=false&ToUs=AGREED&Disc=0"
+        
+        let param100 =
+        "origin=DUB&destination=STN&dateout=2020-08-09&datein=&flexdaysbeforeout=3&flexdaysout=3&flexdaysbeforein=3&flexdaysin=3"
+        let param200 =
+         "&adt=1&teen=0&chd=0&roundtrip=false&ToUs=AGREED&Disc=0"
+        
+        return param100 + param200
     }
 }
 

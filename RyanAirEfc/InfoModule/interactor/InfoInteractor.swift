@@ -32,21 +32,19 @@ class InfoInteractor: InfoInteractorInputProtocol{
     func fetchGetApiAvailability(params: ParamsAvailibility) {
         // feed params
         ApiServiceManager.sharedService.params = params
-        
+        // call api availability
         ApiServiceManager.sharedService.requestAPIAvailability() { (response, error) in
           DispatchQueue.main.async {
             guard let data = response else {
-                self.presenter?.routeDetailFetched(route: nil, errorMessage: error?.infoAppError)
               return
             }
-            
-            let routeList = ["clave": "valor"]
-            
-            if true {
-                self.presenter?.routeDetailFetched(route: [routeList["clave"]!], errorMessage: nil)
-            } else {
-            //  self.presenter?.routeDetailFetched(route: nil, errorMessage: "No route found")
-            }
+                do {
+                    let json = String(data: data, encoding: String.Encoding.utf8)
+                    let tripObject: Trips = try JSONDecoder().decode(Trips.self, from: data)
+                 //   self.presenter?.didFinishFetchingInfoResults(allSearches: stationObject, error: nil)
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
           }
         }
      }

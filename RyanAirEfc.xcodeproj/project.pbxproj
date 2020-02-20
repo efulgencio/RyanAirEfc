@@ -30,6 +30,8 @@
 		417D407923FDB5D300B74E27 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D407823FDB5D300B74E27 /* AppErrors.swift */; };
 		4188840E23FE90C0005409A1 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188840D23FE90C0005409A1 /* SearchManager.swift */; };
 		4188841023FEAA64005409A1 /* ParamsAvailibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */; };
+		4188841223FECC26005409A1 /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188841123FECC26005409A1 /* Trips.swift */; };
+		4188841423FED623005409A1 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188841323FED623005409A1 /* DateUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		417D407823FDB5D300B74E27 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
 		4188840D23FE90C0005409A1 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsAvailibility.swift; sourceTree = "<group>"; };
+		4188841123FECC26005409A1 /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
+		4188841323FED623005409A1 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				41600B2F23FC6B2800D02130 /* Stations.swift */,
+				4188841123FECC26005409A1 /* Trips.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				417D407823FDB5D300B74E27 /* AppErrors.swift */,
 				4188840D23FE90C0005409A1 /* SearchManager.swift */,
 				4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */,
+				4188841323FED623005409A1 /* DateUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -294,11 +300,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4188841223FECC26005409A1 /* Trips.swift in Sources */,
 				41600B3223FC6B3700D02130 /* InfoWireframe.swift in Sources */,
 				41600B3B23FC931400D02130 /* PassengerView.swift in Sources */,
 				41600B2C23FC6AD100D02130 /* InfoInteractor.swift in Sources */,
 				41600B3423FC6B8500D02130 /* InfoProtocols.swift in Sources */,
 				41600B2E23FC6AF600D02130 /* InfoPresenter.swift in Sources */,
+				4188841423FED623005409A1 /* DateUtil.swift in Sources */,
 				41600B4723FD39DC00D02130 /* PopUpVC.swift in Sources */,
 				41600B4523FD2ED100D02130 /* Constants.swift in Sources */,
 				41600B2A23FC6A9E00D02130 /* SearchController.swift in Sources */,

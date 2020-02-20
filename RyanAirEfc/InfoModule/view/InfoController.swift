@@ -76,9 +76,15 @@ class InfoController: UIViewController {
     @IBAction func btnTouchFind(_ sender: Any) {
         let params = ParamsAvailibility.init()
         // fill params
-        params.origin = String((origin.text?.split(separator: "/")[1])!)
-        params.destination = String((origin.text?.split(separator: "/")[1])!)
-        params.dateout = "2020-08-14"
+        guard let codeOrigin = getCode(value: origin.text!) else {
+            return
+        }
+        guard let codeDestination = getCode(value: destination.text!) else {
+            return
+        }
+        params.origin = codeOrigin
+        params.destination = codeDestination
+        params.dateout = stringFromDate(datePicker.date)
         params.adt = passengerAdult.lblQuantity.text!
         params.teen = passengerTeen.lblQuantity.text!
         params.chd = passengerChild.lblQuantity.text!
@@ -86,6 +92,13 @@ class InfoController: UIViewController {
         presenter.getAvailability(params: params)
     }
     
+    // MARK: - private func
+    private func getCode(value: String) -> String? {
+        if let arrayContent = value.split(separator: "/") as Array?, arrayContent.count == 2 {
+            return String(arrayContent[1])
+        }
+        return nil
+    }
     
 }
 

@@ -44,9 +44,12 @@ class ApiServiceManager: NSObject {
       }
     
     func requestAPIAvailability(completion: @escaping ApiServiceCompletionBlock) {
+        
         if var urlComponents = URLComponents(string: APIClient.shared.getAvailability(params: ApiServiceManager.sharedService.params!) ) {
            urlComponents.query = ""
-           guard let url = urlComponents.url else { return }
+           guard let url = urlComponents.url else {
+                    return
+            }
             
            var request = URLRequest(url: url)
            request.httpMethod = "GET"
