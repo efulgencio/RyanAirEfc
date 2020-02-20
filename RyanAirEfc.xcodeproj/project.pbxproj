@@ -218,14 +218,38 @@
 		41600B4123FD28FD00D02130 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4188841723FED8BD005409A1 /* DateUtil */,
+				4188841623FED8A3005409A1 /* Constants */,
+				4188841523FED898005409A1 /* Error */,
 				41600B4223FD294300D02130 /* AddOrSumNumberWithLimit.swift */,
-				41600B4423FD2ED100D02130 /* Constants.swift */,
-				417D407823FDB5D300B74E27 /* AppErrors.swift */,
 				4188840D23FE90C0005409A1 /* SearchManager.swift */,
 				4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */,
-				4188841323FED623005409A1 /* DateUtil.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4188841523FED898005409A1 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				417D407823FDB5D300B74E27 /* AppErrors.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		4188841623FED8A3005409A1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				41600B4423FD2ED100D02130 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4188841723FED8BD005409A1 /* DateUtil */ = {
+			isa = PBXGroup;
+			children = (
+				4188841323FED623005409A1 /* DateUtil.swift */,
+			);
+			path = DateUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
