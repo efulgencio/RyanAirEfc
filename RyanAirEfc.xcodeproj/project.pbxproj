@@ -28,6 +28,7 @@
 		41600B4523FD2ED100D02130 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B4423FD2ED100D02130 /* Constants.swift */; };
 		41600B4723FD39DC00D02130 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B4623FD39DC00D02130 /* PopUpVC.swift */; };
 		417D407923FDB5D300B74E27 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D407823FDB5D300B74E27 /* AppErrors.swift */; };
+		4188840E23FE90C0005409A1 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188840D23FE90C0005409A1 /* SearchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		41600B4423FD2ED100D02130 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		41600B4623FD39DC00D02130 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		417D407823FDB5D300B74E27 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
+		4188840D23FE90C0005409A1 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				41600B4223FD294300D02130 /* AddOrSumNumberWithLimit.swift */,
 				41600B4423FD2ED100D02130 /* Constants.swift */,
 				417D407823FDB5D300B74E27 /* AppErrors.swift */,
+				4188840D23FE90C0005409A1 /* SearchManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				41600B2823FC6A6B00D02130 /* InfoController.swift in Sources */,
 				41600B4023FD1B8600D02130 /* CALayerExt.swift in Sources */,
 				41600B3023FC6B2800D02130 /* Stations.swift in Sources */,
+				4188840E23FE90C0005409A1 /* SearchManager.swift in Sources */,
 				41600B3823FC6FBF00D02130 /* ApiClient.swift in Sources */,
 				417D407923FDB5D300B74E27 /* AppErrors.swift in Sources */,
 			);

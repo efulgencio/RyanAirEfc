@@ -94,7 +94,6 @@ class PassengerView: UIView {
           return nibView
       }
     
-     
     @IBAction func btnTouch(_ sender: UIButton) {
         if sender.tag == BTN_ADD && permissionForAdd() {
             lblQuantity.text =  AddorSumNumberWithLimit.addNumber(actual: valueInt, increment: 1, limitMaxim: limitQuantity)

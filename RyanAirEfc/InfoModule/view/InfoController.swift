@@ -73,6 +73,7 @@ class InfoController: UIViewController {
 //MARK: InfoPresenterProtocol
 extension InfoController: InfoPresenterProtocol {
     func updateTheRecentInfoList(recentSavedInfo: Stations, error: AppErrors?) {
+        SearchManager.shared.originalContent = recentSavedInfo
         stations = recentSavedInfo
     }
 }
