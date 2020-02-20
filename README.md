@@ -3,8 +3,9 @@
 - Apply VIPER to the project.
 
 - Create component : **class PassengerView : UIView** 
+> Use of enum for identify the content of PassengerView
 
-  - Use of enum for identify the content of PassengerView
+  - 
 ```
 enum TypePassenger {
     case adult
@@ -22,3 +23,15 @@ enum TypePassenger {
 ```
   
 - Groups for organizer project
+- Constants for easy read code
+```
+ var typePassenger: TypePassenger = .adult {
+        didSet {
+            switch typePassenger {
+                case .adult:
+                    limitQuantity = LIMIT_PASSENGER_ADULT
+                    minimQuantity = MINUS_PASSENGER_ADULT
+```
+
+
+
