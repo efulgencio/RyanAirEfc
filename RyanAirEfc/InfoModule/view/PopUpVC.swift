@@ -16,6 +16,9 @@ class PopUpVC: UIViewController, RefreshSectionHiddenShow {
     var returnSelected: ((String) -> ())?
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var byName: UITextField!
+    @IBOutlet weak var byCode: UITextField!
+    
     
     var returnValueSel: ((String) -> ())?
     var stations: Stations?
@@ -29,13 +32,38 @@ class PopUpVC: UIViewController, RefreshSectionHiddenShow {
     }
     
      // MARK: - Buttons Action
+    // Find by name
     @IBAction func btnTouchFind(_ sender: Any) {
         
+        if byName.text!.isEmpty { return }
+        
+        byCode.text = ""
+        if let resultado = SearchManager.shared.findByName(content: stations!, valueToFind: byName.text!) {
+            stations!.airports = resultado
+            endEditAndReloadTableView()
+        }
+    }
+    // Find by Code
+    @IBAction func btnTouchFindByCode(_ sender: Any) {
+        
+        if byCode.text!.isEmpty { return }
+        
+        byName.text = ""
+        if let resultado = SearchManager.shared.findByCode(content: stations!, valueToFind: byCode.text!) {
+            stations!.airports = resultado
+            endEditAndReloadTableView()
+        }
     }
     
     @IBAction func btnTouchClose(_ sender: Any) {
         returnSelected!(CANCEL_SELECTION_AIRPORT)
         self.dismiss(animated: false, completion: nil)
+    }
+    
+    // MARK: - private function
+    private func endEditAndReloadTableView() {
+        view.endEditing(true)
+        tableView.reloadData()
     }
 
 

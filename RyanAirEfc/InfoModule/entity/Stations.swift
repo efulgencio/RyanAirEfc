@@ -10,7 +10,7 @@ import Foundation
 
 struct Stations: Codable {
     
-    let airports: [Station]
+    var airports: [Station]
     
     enum CodingKeys: String, CodingKey {
       case stations

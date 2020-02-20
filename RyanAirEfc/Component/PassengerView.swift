@@ -50,6 +50,7 @@ class PassengerView: UIView {
                     minimQuantity = 0
             }
             lblQuantity.text = String(minimQuantity)
+            lblDescription.text = typePassenger.descTypePassenger
         }
     }
     
@@ -76,7 +77,7 @@ class PassengerView: UIView {
           view.frame = bounds
           view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
           view.translatesAutoresizingMaskIntoConstraints = true
-          lblDescription.text = typePassenger.descTypePassenger
+         // lblDescription.text = typePassenger.descTypePassenger
          
           addSubview(view)
   

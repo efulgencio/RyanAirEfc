@@ -13,21 +13,20 @@ class SearchManager: NSObject {
   
   static let shared = SearchManager()
   
-  var originalContent: Stations?
     
-    func findByCode(valueToFind: String) -> [Station]? {
+    func findByCode(content: Stations, valueToFind: String) -> [Station]? {
         
-        let arrResult = originalContent?.airports.filter {
-            $0.name.contains(valueToFind)
+        let arrResult = content.airports.filter {
+            $0.code.contains(valueToFind)
         }
         
         return arrResult
     }
     
-    func findByName(valueToFind: String) -> [Station]? {
+    func findByName(content: Stations, valueToFind: String) -> [Station]? {
         
-        let arrResult = originalContent?.airports.filter {
-            $0.code.contains(valueToFind)
+        let arrResult = content.airports.filter {
+            $0.name.contains(valueToFind)
         }
         
         return arrResult
