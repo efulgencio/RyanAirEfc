@@ -21,10 +21,7 @@ struct Stations: Codable {
        self.airports = try container.decode([Station].self, forKey: .stations)
      }
 
-     func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.airports, forKey: .stations)
-     }
+     func encode(to encoder: Encoder) throws {}
 }
 
 struct Station: Codable {
@@ -43,11 +40,7 @@ struct Station: Codable {
     self.name = try container.decode(String.self, forKey: .name)
   }
     
-  func encode(to encoder: Encoder) throws {
-    var container = encoder.container(keyedBy: CodingKeys.self)
-    try container.encode(self.code, forKey: .code)
-    try container.encode(self.name, forKey: .name)
-  }
+  func encode(to encoder: Encoder) throws {}
     
 }
 

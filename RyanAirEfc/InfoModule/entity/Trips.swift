@@ -22,10 +22,7 @@ struct Trips: Codable {
        self.foundsTrip = try container.decode([Trip].self, forKey: .trips)
      }
 
-     func encode(to encoder: Encoder) throws {
-//        var container = encoder.container(keyedBy: CodingKeys.self)
-//        try container.encode(self.airports, forKey: .stations)
-     }
+     func encode(to encoder: Encoder) throws {}
 }
 
 struct Trip: Codable {
@@ -44,24 +41,6 @@ struct Trip: Codable {
     self.destination = try container.decode(String.self, forKey: .destination)
   }
     
-  func encode(to encoder: Encoder) throws {
-//    var container = encoder.container(keyedBy: CodingKeys.self)
-//    try container.encode(self.code, forKey: .code)
-//    try container.encode(self.name, forKey: .name)
-  }
+  func encode(to encoder: Encoder) throws {}
     
 }
-
-
-//"trips" : [
-//{
-//"origin" : "DUB", "destination" : "STN", "dates" : [
-//{
-//"dateOut" : "2016-04-11T00:00:00.000", "flights" : [
-//] },
-//{
-//"dateOut" : "2016-04-12T00:00:00.000", "flights" : [
-//{
-//"time" : [
-//"2016-04-12T10:00:00.000",
-//"2016-04-12T12:50:00.000" ],
