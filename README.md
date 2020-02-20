@@ -5,3 +5,4 @@
   - Add o Minus Adult
   - Add o Minus Teen
   - Add o Minus Child
+- Groups for organizer project
