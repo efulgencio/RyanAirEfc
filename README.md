@@ -4,8 +4,7 @@
 
 - Create component : **class PassengerView : UIView** 
 > Use of enum for identify the content of PassengerView
-
-  - 
+ 
 ```
 enum TypePassenger {
     case adult
