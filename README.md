@@ -84,7 +84,7 @@ enum TypePassenger {
 - Use of Codable for convert data to entity
 
 ```
-struct **Stations**: Codable {
+struct Stations: Codable {
     
     var airports: [Station]
     
