@@ -1,7 +1,8 @@
 # RyanAirEfc
-Apply VIPER
 
-![Folders project]
-(https://ibb.co/b3FhSRz)
-
-https://ibb.co/b3FhSRz
+- Apply VIPER to the project.
+- Create component : class PassengerView : UIView
+start: 
+  - Add o Minus Adult
+  - Add o Minus Teen
+  - Add o Minus Child
