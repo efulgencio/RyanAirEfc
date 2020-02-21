@@ -99,9 +99,21 @@ extension PopUpVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel!.text = stations?.airports[indexPath.row].name
         cell.detailTextLabel!.text = stations?.airports[indexPath.row].code
+        
         return cell
     }
     
+    /// Soft animation when reload table view
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+
+        UIView.animate(
+            withDuration: 1,
+            delay: 0.1 * Double(indexPath.row),
+            animations: {
+                cell.alpha = 1
+        })
+    }
 }
 
 // MARK: - Delegate table view
