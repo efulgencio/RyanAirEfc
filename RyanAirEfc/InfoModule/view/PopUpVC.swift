@@ -109,7 +109,7 @@ extension PopUpVC: UITableViewDataSource {
 
         UIView.animate(
             withDuration: 1,
-            delay: 0.1 * Double(indexPath.row),
+            delay: 0.02 * Double(indexPath.row),
             animations: {
                 cell.alpha = 1
         })
