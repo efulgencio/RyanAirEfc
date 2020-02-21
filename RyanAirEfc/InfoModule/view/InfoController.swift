@@ -143,6 +143,11 @@ class InfoController: UIViewController {
          let helpVC = storyBoard.instantiateViewController(withIdentifier: "helpVCid") as! HelpVC
          self.present(helpVC, animated: true, completion: nil)
     }
+    
+    @IBAction func tapBtnHelp(_ sender: Any) {
+        presentHelp()
+    }
+    
 }
 
 //MARK: InfoPresenterProtocol

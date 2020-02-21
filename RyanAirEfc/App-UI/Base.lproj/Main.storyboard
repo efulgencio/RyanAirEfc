@@ -93,14 +93,26 @@
                                     <action selector="btnTouchFind:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xaV-h1-dol"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yns-zu-lr5">
+                                <rect key="frame" x="285" y="6" width="25" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="W8q-4C-RBU"/>
+                                    <constraint firstAttribute="height" constant="24" id="kbw-0P-Wu8"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tapBtnHelp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDS-PO-fjo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="40y-xT-R3b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="CQJ-Kh-aX0"/>
+                            <constraint firstItem="yns-zu-lr5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="Cgb-vS-UIT"/>
                             <constraint firstItem="PgS-SR-tfs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ETU-hO-Ysa"/>
                             <constraint firstItem="6cP-9w-wOV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="G2e-z4-Svm"/>
                             <constraint firstItem="ECj-ln-MQN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hlz-xA-jj7"/>
                             <constraint firstItem="PgS-SR-tfs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MgE-eb-0Yu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yns-zu-lr5" secondAttribute="trailing" constant="10" id="PdH-4q-04T"/>
                             <constraint firstItem="40y-xT-R3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="UfY-mw-6Qn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PgS-SR-tfs" secondAttribute="bottom" id="bp9-Jy-wUm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="40y-xT-R3b" secondAttribute="trailing" constant="38" id="hsB-2T-t61"/>
