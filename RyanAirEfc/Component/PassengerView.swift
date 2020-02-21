@@ -78,7 +78,7 @@ class PassengerView: UIView {
           view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
           view.translatesAutoresizingMaskIntoConstraints = true
           view.layer.applyShadow()
-          view.layer.borderColor = UIColor.darkGray.cgColor
+          view.layer.borderColor = UIColor.gray.cgColor
           view.layer.borderWidth = CGFloat(1)
         
           addSubview(view)

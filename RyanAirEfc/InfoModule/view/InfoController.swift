@@ -22,10 +22,6 @@ class InfoController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    // MARK: - lazy var
-    lazy var gradientLayer: CAGradientLayer = {
-      return CAGradientLayer()
-    }()
     
     var destinationSelecction: UITextField!
     var stations: Stations?
@@ -35,10 +31,6 @@ class InfoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Apply gradient
-        setupGradientLayer()
-        
         prepareView()
         prepareGesture()
         presenter.viewRef = self
@@ -46,18 +38,6 @@ class InfoController: UIViewController {
 
     }
     
-    override func viewDidLayoutSubviews() {
-      super.viewDidLayoutSubviews()
-      gradientLayer.frame = view.bounds
-    }
-
-    func setupGradientLayer() {
-      gradientLayer.colors = [UIColor.red, UIColor.green]
-      gradientLayer.startPoint = CGPoint(x: 0.0, y:0.0)
-      gradientLayer.endPoint = CGPoint(x: 1.0, y:1.0)
-        
-      view.layer.addSublayer(gradientLayer)
-    }
     // MARK: - prepare view
     
     /// Establish the type of content for PassengerView (adult, teen, child)
@@ -71,6 +51,7 @@ class InfoController: UIViewController {
         // Apply shadow textField
         origin.layer.applyShadow()
         destination.layer.applyShadow()
+
     }
     
     /// When tap a TextField origin or destination we need  show the list of airports
