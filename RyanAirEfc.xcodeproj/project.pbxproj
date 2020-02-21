@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		415009BD23FFE6A200219857 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415009BC23FFE6A200219857 /* HelpVC.swift */; };
 		41600B0923FC683700D02130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B0823FC683700D02130 /* AppDelegate.swift */; };
 		41600B0B23FC683700D02130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B0A23FC683700D02130 /* SceneDelegate.swift */; };
 		41600B1023FC683700D02130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41600B0E23FC683700D02130 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		415009BC23FFE6A200219857 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		41600B0523FC683700D02130 /* RyanAirEfc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyanAirEfc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41600B0823FC683700D02130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41600B0A23FC683700D02130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				41600B2723FC6A6B00D02130 /* InfoController.swift */,
 				41600B2923FC6A9E00D02130 /* SearchController.swift */,
 				41600B4623FD39DC00D02130 /* PopUpVC.swift */,
+				415009BC23FFE6A200219857 /* HelpVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				41600B4523FD2ED100D02130 /* Constants.swift in Sources */,
 				41600B2A23FC6A9E00D02130 /* SearchController.swift in Sources */,
 				41600B0923FC683700D02130 /* AppDelegate.swift in Sources */,
+				415009BD23FFE6A200219857 /* HelpVC.swift in Sources */,
 				41600B3623FC6DFA00D02130 /* ApiServiceManager.swift in Sources */,
 				41600B0B23FC683700D02130 /* SceneDelegate.swift in Sources */,
 				41600B4323FD294300D02130 /* AddOrSumNumberWithLimit.swift in Sources */,

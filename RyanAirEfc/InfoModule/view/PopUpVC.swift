@@ -106,12 +106,14 @@ extension PopUpVC: UITableViewDataSource {
     /// Soft animation when reload table view
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0
-
+        cell.backgroundColor = #colorLiteral(red: 0.9595017988, green: 0.9690018166, blue: 0.9690018166, alpha: 1)
+        
         UIView.animate(
             withDuration: 1,
             delay: 0.02 * Double(indexPath.row),
             animations: {
                 cell.alpha = 1
+                cell.backgroundColor = UIColor.white
         })
     }
 }

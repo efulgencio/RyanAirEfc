@@ -94,23 +94,30 @@ class InfoController: UIViewController {
     ///  generate the  entity ParamsAvailibility to use at the URL availibility
     /// - Parameter sender: button find
     @IBAction func btnTouchFind(_ sender: Any) {
-        let params = ParamsAvailibility.init()
-        // fill params
-        guard let codeOrigin = getCode(value: origin.text!) else {
-            return
-        }
-        guard let codeDestination = getCode(value: destination.text!) else {
-            return
-        }
-        params.origin = codeOrigin
-        params.destination = codeDestination
-        params.dateout = stringFromDate(datePicker.date)
-        params.adt = passengerAdult.lblQuantity.text!
-        params.teen = passengerTeen.lblQuantity.text!
-        params.chd = passengerChild.lblQuantity.text!
         
-        presenter.getAvailability(params: params)
+        if origin.text!.isEmpty && destination.text!.isEmpty {
+            presentHelp()
+        } else {
+            let params = ParamsAvailibility.init()
+            // fill params
+            guard let codeOrigin = getCode(value: origin.text!) else {
+                return
+            }
+            guard let codeDestination = getCode(value: destination.text!) else {
+                return
+            }
+            params.origin = codeOrigin
+            params.destination = codeDestination
+            params.dateout = stringFromDate(datePicker.date)
+            params.adt = passengerAdult.lblQuantity.text!
+            params.teen = passengerTeen.lblQuantity.text!
+            params.chd = passengerChild.lblQuantity.text!
+            
+            presenter.getAvailability(params: params)
+        }
     }
+    
+    
     
     
     // MARK: - alert error
@@ -131,6 +138,11 @@ class InfoController: UIViewController {
         return nil
     }
     
+    private func presentHelp() {
+         let storyBoard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
+         let helpVC = storyBoard.instantiateViewController(withIdentifier: "helpVCid") as! HelpVC
+         self.present(helpVC, animated: true, completion: nil)
+    }
 }
 
 //MARK: InfoPresenterProtocol
