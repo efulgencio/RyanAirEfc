@@ -29,6 +29,7 @@ class PassengerView: UIView {
     @IBOutlet weak var btnMore: UIButton!
     @IBOutlet weak var btnLess: UIButton!
     @IBOutlet var view: UIView!
+    @IBOutlet weak var lblLimitYears: UILabel!
     
     let BTN_ADD = 1000
     let BTN_MINUS = 2000
@@ -42,12 +43,15 @@ class PassengerView: UIView {
                 case .adult:
                     limitQuantity = LIMIT_PASSENGER_ADULT
                     minimQuantity = MINUS_PASSENGER_ADULT
+                    lblLimitYears.text = "+12 years."
                 case .teen:
                     limitQuantity = LIMIT_PASSENGER_TEEN
                     minimQuantity = MINUS_PASSENGER_TEEN
+                    lblLimitYears.text = "2-11 years."
                 case .child:
                     limitQuantity = LIMIT_PASSENGER_CHILD
                     minimQuantity = MINUS_PASSENGER_CHILD
+                    lblLimitYears.text = "- 24 months"
             }
             lblQuantity.text = String(minimQuantity)
             lblDescription.text = typePassenger.descTypePassenger

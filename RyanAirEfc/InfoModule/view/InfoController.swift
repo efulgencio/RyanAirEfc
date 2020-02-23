@@ -70,8 +70,10 @@ class InfoController: UIViewController {
         
          destinationSelecction = tapGestureRecognizer.view as? UITextField
         
-         let storyBoard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
-         let popupVC = storyBoard.instantiateViewController(withIdentifier: "popUpVCid") as! PopUpVC
+      //    let storyBoard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
+      //   let popupVC = storyBoard.instantiateViewController(withIdentifier: "popUpVCid") as! PopUpVC
+        
+        let popupVC = UIStoryboard.main.listAeroports
          popupVC.stations = stations
          popupVC.returnSelected = someFunctionThatWillHandleYourReturnValue
         
