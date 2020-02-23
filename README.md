@@ -98,5 +98,27 @@ struct Stations: Codable {
 - Use of closure for pass values between ViewControllers.
 ```
  var returnSelected: ((String) -> ())?
+```
+
+Added UIStoryboard extension for better init about view controller
+```
 
 
+
+// Extension for instantiate ViewController contain at StoryBoard
+// You can have more Storyboards
+// at Storyboards.swift fill view controller that the storyboard containt
+extension UIStoryboard {
+    static var main: MainStoryboard {
+        return MainStoryboard()
+    }
+    
+// If we have more storyboard then fill this information
+//    static var <NewVar>: <NameStoryboard> {
+//        return <NameStoryboard>()
+//    }
+
+    convenience init(name: String) {
+         self.init(name: name, bundle: nil)
+     }
+    
