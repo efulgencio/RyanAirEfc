@@ -43,15 +43,15 @@ class PassengerView: UIView {
                 case .adult:
                     limitQuantity = LIMIT_PASSENGER_ADULT
                     minimQuantity = MINUS_PASSENGER_ADULT
-                    lblLimitYears.text = "+12 years."
+                    lblLimitYears.text = "+16 years."
                 case .teen:
                     limitQuantity = LIMIT_PASSENGER_TEEN
                     minimQuantity = MINUS_PASSENGER_TEEN
-                    lblLimitYears.text = "2-11 years."
+                    lblLimitYears.text = "12-15 years."
                 case .child:
                     limitQuantity = LIMIT_PASSENGER_CHILD
                     minimQuantity = MINUS_PASSENGER_CHILD
-                    lblLimitYears.text = "- 24 months"
+                    lblLimitYears.text = "2-11 years."
             }
             lblQuantity.text = String(minimQuantity)
             lblDescription.text = typePassenger.descTypePassenger
