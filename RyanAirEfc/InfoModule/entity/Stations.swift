@@ -16,6 +16,10 @@ struct Stations: Codable {
       case stations
     }
     
+    init(elements: [Station]) {
+      self.airports = elements
+    }
+        
      init(from decoder: Decoder) throws {
        let container = try decoder.container(keyedBy: CodingKeys.self)
        self.airports = try container.decode([Station].self, forKey: .stations)
@@ -33,13 +37,18 @@ struct Station: Codable {
     case code
     case name
   }
+
+    init(code: String, name:String) {
+        self.code = code
+        self.name = name
+    }
     
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     self.code = try container.decode(String.self, forKey: .code)
     self.name = try container.decode(String.self, forKey: .name)
   }
-    
+
   func encode(to encoder: Encoder) throws {}
     
 }

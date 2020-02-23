@@ -27,7 +27,7 @@
 		41600B3B23FC931400D02130 /* PassengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B3A23FC931400D02130 /* PassengerView.swift */; };
 		41600B3D23FC932D00D02130 /* PassengerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41600B3C23FC932D00D02130 /* PassengerView.xib */; };
 		41600B4023FD1B8600D02130 /* CALayerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B3F23FD1B8600D02130 /* CALayerExt.swift */; };
-		41600B4323FD294300D02130 /* AddOrSumNumberWithLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B4223FD294300D02130 /* AddOrSumNumberWithLimit.swift */; };
+		41600B4323FD294300D02130 /* AddorSumNumberWithLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B4223FD294300D02130 /* AddorSumNumberWithLimit.swift */; };
 		41600B4523FD2ED100D02130 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B4423FD2ED100D02130 /* Constants.swift */; };
 		41600B4723FD39DC00D02130 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41600B4623FD39DC00D02130 /* PopUpVC.swift */; };
 		417D407923FDB5D300B74E27 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417D407823FDB5D300B74E27 /* AppErrors.swift */; };
@@ -35,7 +35,19 @@
 		4188841023FEAA64005409A1 /* ParamsAvailibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */; };
 		4188841223FECC26005409A1 /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188841123FECC26005409A1 /* Trips.swift */; };
 		4188841423FED623005409A1 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188841323FED623005409A1 /* DateUtil.swift */; };
+		419EB95E240322FA008B6666 /* AddMinusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419EB95D240322FA008B6666 /* AddMinusTest.swift */; };
+		419EB9602403298E008B6666 /* SearchManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419EB95F2403298E008B6666 /* SearchManagerTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		419EB9582403217A008B6666 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41600AFD23FC683700D02130 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41600B0423FC683700D02130;
+			remoteInfo = RyanAirEfc;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		410CB0412402723500D70178 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
@@ -60,7 +72,7 @@
 		41600B3A23FC931400D02130 /* PassengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerView.swift; sourceTree = "<group>"; };
 		41600B3C23FC932D00D02130 /* PassengerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassengerView.xib; sourceTree = "<group>"; };
 		41600B3F23FD1B8600D02130 /* CALayerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExt.swift; sourceTree = "<group>"; };
-		41600B4223FD294300D02130 /* AddOrSumNumberWithLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrSumNumberWithLimit.swift; sourceTree = "<group>"; };
+		41600B4223FD294300D02130 /* AddorSumNumberWithLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddorSumNumberWithLimit.swift; sourceTree = "<group>"; };
 		41600B4423FD2ED100D02130 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		41600B4623FD39DC00D02130 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		417D407823FDB5D300B74E27 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
@@ -68,10 +80,21 @@
 		4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsAvailibility.swift; sourceTree = "<group>"; };
 		4188841123FECC26005409A1 /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		4188841323FED623005409A1 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		419EB9532403217A008B6666 /* RyanAirEfcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanAirEfcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		419EB9572403217A008B6666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		419EB95D240322FA008B6666 /* AddMinusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMinusTest.swift; sourceTree = "<group>"; };
+		419EB95F2403298E008B6666 /* SearchManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		41600B0223FC683700D02130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		419EB9502403217A008B6666 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -94,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				41600B0723FC683700D02130 /* RyanAirEfc */,
+				419EB9542403217A008B6666 /* RyanAirEfcTests */,
 				41600B0623FC683700D02130 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				41600B0523FC683700D02130 /* RyanAirEfc.app */,
+				419EB9532403217A008B6666 /* RyanAirEfcTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,7 +263,7 @@
 				4188841723FED8BD005409A1 /* DateUtil */,
 				4188841623FED8A3005409A1 /* Constants */,
 				4188841523FED898005409A1 /* Error */,
-				41600B4223FD294300D02130 /* AddOrSumNumberWithLimit.swift */,
+				41600B4223FD294300D02130 /* AddorSumNumberWithLimit.swift */,
 				4188840D23FE90C0005409A1 /* SearchManager.swift */,
 				4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */,
 			);
@@ -269,6 +294,16 @@
 			path = DateUtil;
 			sourceTree = "<group>";
 		};
+		419EB9542403217A008B6666 /* RyanAirEfcTests */ = {
+			isa = PBXGroup;
+			children = (
+				419EB95D240322FA008B6666 /* AddMinusTest.swift */,
+				419EB95F2403298E008B6666 /* SearchManagerTest.swift */,
+				419EB9572403217A008B6666 /* Info.plist */,
+			);
+			path = RyanAirEfcTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,6 +324,24 @@
 			productReference = 41600B0523FC683700D02130 /* RyanAirEfc.app */;
 			productType = "com.apple.product-type.application";
 		};
+		419EB9522403217A008B6666 /* RyanAirEfcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419EB95C2403217A008B6666 /* Build configuration list for PBXNativeTarget "RyanAirEfcTests" */;
+			buildPhases = (
+				419EB94F2403217A008B6666 /* Sources */,
+				419EB9502403217A008B6666 /* Frameworks */,
+				419EB9512403217A008B6666 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				419EB9592403217A008B6666 /* PBXTargetDependency */,
+			);
+			name = RyanAirEfcTests;
+			productName = RyanAirEfcTests;
+			productReference = 419EB9532403217A008B6666 /* RyanAirEfcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -301,6 +354,10 @@
 				TargetAttributes = {
 					41600B0423FC683700D02130 = {
 						CreatedOnToolsVersion = 11.3;
+					};
+					419EB9522403217A008B6666 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 41600B0423FC683700D02130;
 					};
 				};
 			};
@@ -318,6 +375,7 @@
 			projectRoot = "";
 			targets = (
 				41600B0423FC683700D02130 /* RyanAirEfc */,
+				419EB9522403217A008B6666 /* RyanAirEfcTests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,6 +389,13 @@
 				41600B3D23FC932D00D02130 /* PassengerView.xib in Resources */,
 				41600B1223FC683900D02130 /* Assets.xcassets in Resources */,
 				41600B1023FC683700D02130 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		419EB9512403217A008B6666 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +421,7 @@
 				415009BD23FFE6A200219857 /* HelpVC.swift in Sources */,
 				41600B3623FC6DFA00D02130 /* ApiServiceManager.swift in Sources */,
 				41600B0B23FC683700D02130 /* SceneDelegate.swift in Sources */,
-				41600B4323FD294300D02130 /* AddOrSumNumberWithLimit.swift in Sources */,
+				41600B4323FD294300D02130 /* AddorSumNumberWithLimit.swift in Sources */,
 				410CB0442402724600D70178 /* Storyboards.swift in Sources */,
 				41600B2823FC6A6B00D02130 /* InfoController.swift in Sources */,
 				41600B4023FD1B8600D02130 /* CALayerExt.swift in Sources */,
@@ -368,7 +433,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		419EB94F2403217A008B6666 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419EB95E240322FA008B6666 /* AddMinusTest.swift in Sources */,
+				419EB9602403298E008B6666 /* SearchManagerTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		419EB9592403217A008B6666 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41600B0423FC683700D02130 /* RyanAirEfc */;
+			targetProxy = 419EB9582403217A008B6666 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		41600B0E23FC683700D02130 /* Main.storyboard */ = {
@@ -540,6 +622,46 @@
 			};
 			name = Release;
 		};
+		419EB95A2403217A008B6666 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5M2CLGMTYQ;
+				INFOPLIST_FILE = RyanAirEfcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eduardofulgencio.RyanAirEfcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RyanAirEfc.app/RyanAirEfc";
+			};
+			name = Debug;
+		};
+		419EB95B2403217A008B6666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5M2CLGMTYQ;
+				INFOPLIST_FILE = RyanAirEfcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eduardofulgencio.RyanAirEfcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RyanAirEfc.app/RyanAirEfc";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,6 +679,15 @@
 			buildConfigurations = (
 				41600B1A23FC683900D02130 /* Debug */,
 				41600B1B23FC683900D02130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		419EB95C2403217A008B6666 /* Build configuration list for PBXNativeTarget "RyanAirEfcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419EB95A2403217A008B6666 /* Debug */,
+				419EB95B2403217A008B6666 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
