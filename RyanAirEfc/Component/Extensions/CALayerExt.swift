@@ -35,6 +35,7 @@ extension CALayer {
         self.add(animation, forKey: CATransitionType.push.rawValue)
     }
     
+    // Shadows for layer
     func applyShadow() {
         self.shadowOpacity = 0.2
         self.shadowRadius = CGFloat(5.0)

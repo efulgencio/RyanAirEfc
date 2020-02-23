@@ -74,7 +74,6 @@ class PassengerView: UIView {
         nibSetup()
     }
 
-      
       private func nibSetup() {
 
           view = loadViewFromNib()
@@ -113,6 +112,8 @@ class PassengerView: UIView {
     }
     
     // MARK: - private function
+    
+    
     private func permissionForAdd() -> Bool {
         return !((valueInt + 1) > limitQuantity)
     }
