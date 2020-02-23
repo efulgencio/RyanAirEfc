@@ -15,9 +15,9 @@ enum TypePassenger {
     
     var descTypePassenger: String {
         switch self {
-            case .adult: return "Adult"
-            case .teen: return "Teen"
-            case .child: return "Child"
+            case .adult: return ADULT_LABEL
+            case .teen: return TEEN_LABEL
+            case .child: return CHILD_LABEL
         }
     }
 }
@@ -43,15 +43,15 @@ class PassengerView: UIView {
                 case .adult:
                     limitQuantity = LIMIT_PASSENGER_ADULT
                     minimQuantity = MINUS_PASSENGER_ADULT
-                    lblLimitYears.text = "+16 years."
+                    lblLimitYears.text = ADULT_YEARS
                 case .teen:
                     limitQuantity = LIMIT_PASSENGER_TEEN
                     minimQuantity = MINUS_PASSENGER_TEEN
-                    lblLimitYears.text = "12-15 years."
+                    lblLimitYears.text = TEEN_YEARS
                 case .child:
                     limitQuantity = LIMIT_PASSENGER_CHILD
                     minimQuantity = MINUS_PASSENGER_CHILD
-                    lblLimitYears.text = "2-11 years."
+                    lblLimitYears.text = CHILD_YEARS
             }
             lblQuantity.text = String(minimQuantity)
             lblDescription.text = typePassenger.descTypePassenger
@@ -123,9 +123,9 @@ class PassengerView: UIView {
     
     private func updateViewAfterValues() {
         if valueInt > 1 && typePassenger == TypePassenger.child {
-            lblDescription.text = "Children"
+            lblDescription.text = CHILDREN_LABEL
         } else if valueInt == 0 && typePassenger == TypePassenger.child {
-            lblDescription.text = "Child"
+            lblDescription.text = CHILD_LABEL
         }
     }
     

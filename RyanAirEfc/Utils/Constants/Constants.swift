@@ -17,3 +17,12 @@ let MINUS_PASSENGER_TEEN = 0
 let MINUS_PASSENGER_CHILD = 0
 
 let CANCEL_SELECTION_AIRPORT = "USER CANCEL SELECTED AIRPORT"
+
+let ADULT_LABEL = "Adult"
+let TEEN_LABEL = "Teen"
+let CHILD_LABEL = "Child"
+let CHILDREN_LABEL = "Children"
+
+let ADULT_YEARS =  "+16 years."
+let TEEN_YEARS = "12-15 years."
+let CHILD_YEARS = "2-11 years."
