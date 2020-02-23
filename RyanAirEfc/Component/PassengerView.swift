@@ -109,6 +109,7 @@ class PassengerView: UIView {
             lblQuantity.text = AddorSumNumberWithLimit.minusNumber(actual: valueInt, decrement: 1, limitMinim: minimQuantity)
             lblQuantity.layer.topAnimation(duration: 0.5)
         }
+        updateViewAfterValues()
     }
     
     // MARK: - private function
@@ -118,6 +119,14 @@ class PassengerView: UIView {
     
     private func permissionForMinus() -> Bool {
         return !((valueInt - 1) < minimQuantity)
+    }
+    
+    private func updateViewAfterValues() {
+        if valueInt > 1 && typePassenger == TypePassenger.child {
+            lblDescription.text = "Children"
+        } else if valueInt == 0 && typePassenger == TypePassenger.child {
+            lblDescription.text = "Child"
+        }
     }
     
 }
