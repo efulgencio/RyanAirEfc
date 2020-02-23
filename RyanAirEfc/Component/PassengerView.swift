@@ -24,7 +24,7 @@ enum TypePassenger {
 
 class PassengerView: UIView {
     
-    @IBOutlet weak var lblQuantity: UILabel!
+    @IBOutlet weak var lblQuantity: UILabel! 
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var btnMore: UIButton!
     @IBOutlet weak var btnLess: UIButton!

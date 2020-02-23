@@ -15,6 +15,10 @@ class MainStoryboard: UIStoryboard {
     var listAeroports: PopUpVC {
         return self.instantiate(withIdentifier: "popUpVCid")
     }
+    
+    var help: HelpVC {
+        return self.instantiate(withIdentifier: "helpVCid")
+    }
 }
 
 // If we have more storyboard then fill this information

@@ -69,11 +69,8 @@ class InfoController: UIViewController {
     @objc func tapped(tapGestureRecognizer: UITapGestureRecognizer){
         
          destinationSelecction = tapGestureRecognizer.view as? UITextField
-        
-      //    let storyBoard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
-      //   let popupVC = storyBoard.instantiateViewController(withIdentifier: "popUpVCid") as! PopUpVC
-        
-        let popupVC = UIStoryboard.main.listAeroports
+
+         let popupVC = UIStoryboard.main.listAeroports
          popupVC.stations = stations
          popupVC.returnSelected = someFunctionThatWillHandleYourReturnValue
         
@@ -141,8 +138,7 @@ class InfoController: UIViewController {
     }
     
     private func presentHelp() {
-         let storyBoard: UIStoryboard =  UIStoryboard(name: "Main", bundle: nil)
-         let helpVC = storyBoard.instantiateViewController(withIdentifier: "helpVCid") as! HelpVC
+         let helpVC = UIStoryboard.main.help
          self.present(helpVC, animated: true, completion: nil)
     }
     
