@@ -125,7 +125,7 @@ class PassengerView: UIView {
     private func updateViewAfterValues() {
         if valueInt > 1 && typePassenger == TypePassenger.child {
             lblDescription.text = CHILDREN_LABEL
-        } else if valueInt == 0 && typePassenger == TypePassenger.child {
+        } else if valueInt < 2 && typePassenger == TypePassenger.child {
             lblDescription.text = CHILD_LABEL
         }
     }
