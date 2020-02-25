@@ -23,8 +23,8 @@ class ApiServiceManager: NSObject {
       func requestAPI(completion: @escaping ApiServiceCompletionBlock) {
         
             if var urlComponents = URLComponents(string: APIClient.shared.urlStations) {
-               urlComponents.query = ""
-               guard let url = urlComponents.url else { return }
+//               urlComponents.query = ""
+//               guard let url = urlComponents.url else { return }
                 
                var request = URLRequest(url: url)
                request.httpMethod = "GET"
