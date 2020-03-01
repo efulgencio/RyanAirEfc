@@ -1,0 +1,6 @@
+framework module Pods_RyanAirEfcTests {
+  umbrella header "Pods-RyanAirEfcTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
