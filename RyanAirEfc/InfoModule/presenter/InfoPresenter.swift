@@ -17,6 +17,8 @@ class InfoPresenter: InfoViewProtocol {
     func viewDidLoad() {
        InfoWireframe.loadInfoPageComponents(withPresenter: self)
        infoInteractor?.fetchGetApi()
+       // infoInteractor?.fetchGetApiAlamofire()
+       // infoInteractor?.fetchWithParamsAlamofire()
     }
 
     func getAvailability(params: ParamsAvailibility) {

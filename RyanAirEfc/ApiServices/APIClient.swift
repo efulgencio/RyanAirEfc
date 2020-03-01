@@ -17,6 +17,7 @@ class APIClient {
     /// Method for get the base url availibility and parameters values
     /// - Parameter params: entity with params values for generate url avilibility
     func getAvailability(params: ParamsAvailibility) -> String {
-        return params.generateUrl()
+       // return params.generateUrl()
+        return params.testDocumentPdf()
     }
 }

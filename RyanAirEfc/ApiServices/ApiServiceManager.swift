@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+import Alamofire
+import SwiftyJSON
 
 class ApiServiceManager: NSObject {
   
@@ -16,15 +17,16 @@ class ApiServiceManager: NSObject {
   static let sharedService = ApiServiceManager()
   
   typealias ApiServiceCompletionBlock = (_ data: Data?,_ error: AppErrors?)->Void
+  typealias ApiServiceCompletionBlockAlamofire = (_ jsonResult: JSON?,_ error: AppErrors?)->Void
     
     
     /// Call the URL for get the list of aeroports
     /// - Parameter completion: return the data with the information and AppErrors if process
       func requestAPI(completion: @escaping ApiServiceCompletionBlock) {
         
-            if var urlComponents = URLComponents(string: APIClient.shared.urlStations) {
+            if let urlComponents = URLComponents(string: APIClient.shared.urlStations) {
 //               urlComponents.query = ""
-//               guard let url = urlComponents.url else { return }
+               guard let url = urlComponents.url else { return }
                 
                var request = URLRequest(url: url)
                request.httpMethod = "GET"
@@ -76,6 +78,57 @@ class ApiServiceManager: NSObject {
             }
            task.resume()
         }
+    }
+    
+}
+
+extension ApiServiceManager {
+    
+    // Alamofire version
+    func getStationsAlamofire(completion: @escaping ApiServiceCompletionBlockAlamofire) {
+        
+        guard let url = URL(string: APIClient.shared.urlStations) else {
+          return
+        }
+        
+       // let params : [String : String] = ["lat" : "1.0", "lon" : "1.0", "appid" : "APP_ID"]
+        
+                  
+        Alamofire.request(url, method: .get, parameters: nil).responseJSON {
+            response in
+            if response.result.isSuccess {
+                let resultJSON : JSON = JSON(response.result.value!)
+                print(resultJSON)
+                completion(resultJSON,nil)
+            }
+            else {
+                print("Error \(String(describing: response.result.error))")
+                completion(nil,.error_code1)
+            }
+        }
+    }
+    
+    
+    func requestAPIAvailabilityAlamofire(completion: @escaping ApiServiceCompletionBlockAlamofire) {
+
+        guard let url = URL(string: APIClient.shared.getAvailability(params: ParamsAvailibility())) else {
+          return
+        }
+          
+        Alamofire.request(url, method: .get, parameters: nil).responseJSON {
+            response in
+            if response.result.isSuccess {
+                let resultJSON : JSON = JSON(response.result.value!)
+                print(resultJSON)
+                completion(resultJSON,nil)
+            }
+            else {
+                print("Error \(String(describing: response.result.error))")
+                completion(nil,.error_code1)
+            }
+        }
+       
+        
     }
     
 }

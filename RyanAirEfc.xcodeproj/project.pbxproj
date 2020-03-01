@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,11 +35,21 @@
 		4188841023FEAA64005409A1 /* ParamsAvailibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */; };
 		4188841223FECC26005409A1 /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188841123FECC26005409A1 /* Trips.swift */; };
 		4188841423FED623005409A1 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188841323FED623005409A1 /* DateUtil.swift */; };
+		419C4E6A2406BF5500E0BDD2 /* RyanAirEfcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C4E692406BF5500E0BDD2 /* RyanAirEfcUITests.swift */; };
 		419EB95E240322FA008B6666 /* AddMinusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419EB95D240322FA008B6666 /* AddMinusTest.swift */; };
 		419EB9602403298E008B6666 /* SearchManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419EB95F2403298E008B6666 /* SearchManagerTest.swift */; };
+		4D9036192CA663E717758CFB /* Pods_RyanAirEfc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA96D4F26C3CCB455658AC2E /* Pods_RyanAirEfc.framework */; };
+		73D10BF4196A01D1118749CC /* Pods_RyanAirEfcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933BD6AFA65CAF4889744DD3 /* Pods_RyanAirEfcTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		419C4E6C2406BF5500E0BDD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41600AFD23FC683700D02130 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41600B0423FC683700D02130;
+			remoteInfo = RyanAirEfc;
+		};
 		419EB9582403217A008B6666 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 41600AFD23FC683700D02130 /* Project object */;
@@ -50,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BD495A4C5D1DC8F1AA152B3 /* Pods-RyanAirEfc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirEfc.release.xcconfig"; path = "Target Support Files/Pods-RyanAirEfc/Pods-RyanAirEfc.release.xcconfig"; sourceTree = "<group>"; };
+		289B91A19133DEB2EA7E7564 /* Pods-RyanAirEfc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirEfc.debug.xcconfig"; path = "Target Support Files/Pods-RyanAirEfc/Pods-RyanAirEfc.debug.xcconfig"; sourceTree = "<group>"; };
+		400D501C55DF8418E4F9F023 /* Pods-RyanAirEfcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirEfcTests.debug.xcconfig"; path = "Target Support Files/Pods-RyanAirEfcTests/Pods-RyanAirEfcTests.debug.xcconfig"; sourceTree = "<group>"; };
 		410CB0412402723500D70178 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		410CB0432402724600D70178 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		415009BC23FFE6A200219857 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
@@ -80,14 +93,28 @@
 		4188840F23FEAA64005409A1 /* ParamsAvailibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsAvailibility.swift; sourceTree = "<group>"; };
 		4188841123FECC26005409A1 /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		4188841323FED623005409A1 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		419C4E672406BF5500E0BDD2 /* RyanAirEfcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanAirEfcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		419C4E692406BF5500E0BDD2 /* RyanAirEfcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyanAirEfcUITests.swift; sourceTree = "<group>"; };
+		419C4E6B2406BF5500E0BDD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		419EB9532403217A008B6666 /* RyanAirEfcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RyanAirEfcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		419EB9572403217A008B6666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		419EB95D240322FA008B6666 /* AddMinusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMinusTest.swift; sourceTree = "<group>"; };
 		419EB95F2403298E008B6666 /* SearchManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManagerTest.swift; sourceTree = "<group>"; };
+		933BD6AFA65CAF4889744DD3 /* Pods_RyanAirEfcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirEfcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE5E18F42C8CA82B1B07906F /* Pods-RyanAirEfcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RyanAirEfcTests.release.xcconfig"; path = "Target Support Files/Pods-RyanAirEfcTests/Pods-RyanAirEfcTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA96D4F26C3CCB455658AC2E /* Pods_RyanAirEfc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanAirEfc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		41600B0223FC683700D02130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D9036192CA663E717758CFB /* Pods_RyanAirEfc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		419C4E642406BF5500E0BDD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D10BF4196A01D1118749CC /* Pods_RyanAirEfcTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +146,10 @@
 			children = (
 				41600B0723FC683700D02130 /* RyanAirEfc */,
 				419EB9542403217A008B6666 /* RyanAirEfcTests */,
+				419C4E682406BF5500E0BDD2 /* RyanAirEfcUITests */,
 				41600B0623FC683700D02130 /* Products */,
+				657F8B9BDCD91639EFF87061 /* Pods */,
+				D80C234667427AF61B1303F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +158,7 @@
 			children = (
 				41600B0523FC683700D02130 /* RyanAirEfc.app */,
 				419EB9532403217A008B6666 /* RyanAirEfcTests.xctest */,
+				419C4E672406BF5500E0BDD2 /* RyanAirEfcUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +326,15 @@
 			path = DateUtil;
 			sourceTree = "<group>";
 		};
+		419C4E682406BF5500E0BDD2 /* RyanAirEfcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				419C4E692406BF5500E0BDD2 /* RyanAirEfcUITests.swift */,
+				419C4E6B2406BF5500E0BDD2 /* Info.plist */,
+			);
+			path = RyanAirEfcUITests;
+			sourceTree = "<group>";
+		};
 		419EB9542403217A008B6666 /* RyanAirEfcTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +345,26 @@
 			path = RyanAirEfcTests;
 			sourceTree = "<group>";
 		};
+		657F8B9BDCD91639EFF87061 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				289B91A19133DEB2EA7E7564 /* Pods-RyanAirEfc.debug.xcconfig */,
+				1BD495A4C5D1DC8F1AA152B3 /* Pods-RyanAirEfc.release.xcconfig */,
+				400D501C55DF8418E4F9F023 /* Pods-RyanAirEfcTests.debug.xcconfig */,
+				DE5E18F42C8CA82B1B07906F /* Pods-RyanAirEfcTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D80C234667427AF61B1303F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA96D4F26C3CCB455658AC2E /* Pods_RyanAirEfc.framework */,
+				933BD6AFA65CAF4889744DD3 /* Pods_RyanAirEfcTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,9 +372,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41600B1923FC683900D02130 /* Build configuration list for PBXNativeTarget "RyanAirEfc" */;
 			buildPhases = (
+				C105433BF7FD5B0472390C21 /* [CP] Check Pods Manifest.lock */,
 				41600B0123FC683700D02130 /* Sources */,
 				41600B0223FC683700D02130 /* Frameworks */,
 				41600B0323FC683700D02130 /* Resources */,
+				8CD008D00114FB0A8AECCB6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -324,10 +387,29 @@
 			productReference = 41600B0523FC683700D02130 /* RyanAirEfc.app */;
 			productType = "com.apple.product-type.application";
 		};
+		419C4E662406BF5500E0BDD2 /* RyanAirEfcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419C4E702406BF5500E0BDD2 /* Build configuration list for PBXNativeTarget "RyanAirEfcUITests" */;
+			buildPhases = (
+				419C4E632406BF5500E0BDD2 /* Sources */,
+				419C4E642406BF5500E0BDD2 /* Frameworks */,
+				419C4E652406BF5500E0BDD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				419C4E6D2406BF5500E0BDD2 /* PBXTargetDependency */,
+			);
+			name = RyanAirEfcUITests;
+			productName = RyanAirEfcUITests;
+			productReference = 419C4E672406BF5500E0BDD2 /* RyanAirEfcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		419EB9522403217A008B6666 /* RyanAirEfcTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 419EB95C2403217A008B6666 /* Build configuration list for PBXNativeTarget "RyanAirEfcTests" */;
 			buildPhases = (
+				7779BEF90B8F717B72D03748 /* [CP] Check Pods Manifest.lock */,
 				419EB94F2403217A008B6666 /* Sources */,
 				419EB9502403217A008B6666 /* Frameworks */,
 				419EB9512403217A008B6666 /* Resources */,
@@ -355,6 +437,10 @@
 					41600B0423FC683700D02130 = {
 						CreatedOnToolsVersion = 11.3;
 					};
+					419C4E662406BF5500E0BDD2 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 41600B0423FC683700D02130;
+					};
 					419EB9522403217A008B6666 = {
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = 41600B0423FC683700D02130;
@@ -376,6 +462,7 @@
 			targets = (
 				41600B0423FC683700D02130 /* RyanAirEfc */,
 				419EB9522403217A008B6666 /* RyanAirEfcTests */,
+				419C4E662406BF5500E0BDD2 /* RyanAirEfcUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,6 +479,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		419C4E652406BF5500E0BDD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		419EB9512403217A008B6666 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,6 +494,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7779BEF90B8F717B72D03748 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RyanAirEfcTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CD008D00114FB0A8AECCB6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RyanAirEfc/Pods-RyanAirEfc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RyanAirEfc/Pods-RyanAirEfc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RyanAirEfc/Pods-RyanAirEfc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C105433BF7FD5B0472390C21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RyanAirEfc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		41600B0123FC683700D02130 /* Sources */ = {
@@ -433,6 +591,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		419C4E632406BF5500E0BDD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419C4E6A2406BF5500E0BDD2 /* RyanAirEfcUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		419EB94F2403217A008B6666 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +611,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		419C4E6D2406BF5500E0BDD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41600B0423FC683700D02130 /* RyanAirEfc */;
+			targetProxy = 419C4E6C2406BF5500E0BDD2 /* PBXContainerItemProxy */;
+		};
 		419EB9592403217A008B6666 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 41600B0423FC683700D02130 /* RyanAirEfc */;
@@ -588,6 +759,7 @@
 		};
 		41600B1A23FC683900D02130 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289B91A19133DEB2EA7E7564 /* Pods-RyanAirEfc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -606,6 +778,7 @@
 		};
 		41600B1B23FC683900D02130 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD495A4C5D1DC8F1AA152B3 /* Pods-RyanAirEfc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -622,8 +795,47 @@
 			};
 			name = Release;
 		};
+		419C4E6E2406BF5500E0BDD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5M2CLGMTYQ;
+				INFOPLIST_FILE = RyanAirEfcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eduardofulgencio.RyanAirEfcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RyanAirEfc;
+			};
+			name = Debug;
+		};
+		419C4E6F2406BF5500E0BDD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5M2CLGMTYQ;
+				INFOPLIST_FILE = RyanAirEfcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eduardofulgencio.RyanAirEfcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RyanAirEfc;
+			};
+			name = Release;
+		};
 		419EB95A2403217A008B6666 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 400D501C55DF8418E4F9F023 /* Pods-RyanAirEfcTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -644,6 +856,7 @@
 		};
 		419EB95B2403217A008B6666 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE5E18F42C8CA82B1B07906F /* Pods-RyanAirEfcTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -679,6 +892,15 @@
 			buildConfigurations = (
 				41600B1A23FC683900D02130 /* Debug */,
 				41600B1B23FC683900D02130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		419C4E702406BF5500E0BDD2 /* Build configuration list for PBXNativeTarget "RyanAirEfcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419C4E6E2406BF5500E0BDD2 /* Debug */,
+				419C4E6F2406BF5500E0BDD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

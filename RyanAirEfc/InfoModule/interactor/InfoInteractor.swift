@@ -49,3 +49,38 @@ class InfoInteractor: InfoInteractorInputProtocol{
      }
 
 }
+
+extension InfoInteractor {
+    
+    func fetchGetApiAlamofire() {
+        ApiServiceManager.sharedService.getStationsAlamofire() { (response, error) in
+          DispatchQueue.main.async {
+            guard let data = response else {
+                return
+            }
+                do {
+                  //  let stationObject: Stations = try JSONDecoder().decode(Stations.self, from: data)
+                  //  self.presenter?.didFinishFetchingStationResults(allSearches: stationObject, error: nil)
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+          }
+        }
+    }
+    
+    func fetchWithParamsAlamofire() {
+        ApiServiceManager.sharedService.requestAPIAvailabilityAlamofire() { (response, error) in
+          DispatchQueue.main.async {
+            guard let data = response else {
+              return
+            }
+                do {
+               //     let tripObject: Trips = try JSONDecoder().decode(Trips.self, from: data)
+                //    self.presenter?.didFinishFetchingTripResults(allSearches: tripObject, error: nil)
+                } catch  _ as NSError {
+                  //  self.presenter?.didFinishFetchingTripResults(allSearches: nil, error: AppErrors.error_parsingJSONDecoded)
+                }
+          }
+        }
+    }
+}

@@ -50,6 +50,6 @@ class ParamsAvailibility {
         let param200 =
          "&adt=1&teen=0&chd=0&roundtrip=false&ToUs=AGREED&Disc=0"
         
-        return param100 + param200
+        return "https://sit-nativeapps.ryanair.com/api/v4/Availability?" + param100 + param200
     }
 }
